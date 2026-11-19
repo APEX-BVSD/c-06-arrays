@@ -19,37 +19,38 @@ You will need the following components:
 | Component |	Arduino connection |
 | --- | --- |
 | Pushbutton (one side)	| Digital pin 2 |
-| Pushbutton | (opposite side)	| GND |
+| Pushbutton (opposite side)	| GND |
 | LED anode (+)	| Digital pin 9  |
-| LED cathode (−)  |	GND through 220Ω resistor |
+| LED cathode (−)  |	GND through 330Ω resistor |
 
 **Note:** On the LED it doesn't matter whether the resistor goes on the anode or cathode end.
 
 Use the following image to guide your setup.
 ![Wiring diagram for pushbutton and LED](pushbutton_wiring.png)
 
-## Investigate and Reflect
-1. What happens to the LED when you push the button.
+## 3. Investigate
+Upload your pushbutton.ino code to the Arduino and run it. Open the Serial monitor.
+
+1. What happens to the LED when you push the button?
     > your answer
 
-2. What values appear in the Serial monitor whe you press and hold down the button?
+2. What values appear in the Serial monitor when you press and hold down the button?
     > your answer
-
 
 3. Why does LOW indicate that the button is pressed?
     > your answer
 
-4. What is the purpose of INPUT_PULLUP when you set up the pin mode?
+4. In the pushbutton there is an internal pull up resistor that keeps the pin HIGH until the button connects it. What is the purpose of INPUT_PULLUP when you set up the pin mode?
     > your answer
 
-# 3. Modify the response
+## 4. Modify the behavior
 Modify the code so that 
 1. the LED is *on* when the button is not pushed and *off* when it is pushed.
 2. the LED blinks every 250 milliseconds when the button is held
 3. pressing the button *toggles* the LED between on/off. The LED should stay in its new state after the button is released.
 4. Challenge: a twist on number 3 - figure out how to detect a new press rather than checking if it's being pushed.
 
-# 4. Wrap-up
+## 5. Wrap-up
 1. How is a digital input different from a digital output?
     > your answer
 
