@@ -28,8 +28,12 @@ You will need the following components:
 Use the following image to guide your setup.
 ![Wiring diagram for pushbutton and LED](pushbutton_wiring.png)
 
+
+
 ## 3. Investigate
 Upload your pushbutton.ino code to the Arduino and run it. Open the Serial monitor.
+
+When we configure the button pin using INPUT_PULLUP, the Arduino activates an internal pull-up resistor that keeps the pin HIGH until the button connects it to GND. The resistor keeps the pin at a *stable* HIGH signal when the button isn't pressed. Because it's not connected to a defined voltage, the pin would be *floating*, meaning it can get random HIGH / LOW values. 
 
 1. What happens to the LED when you push the button?
     > your answer
@@ -38,9 +42,6 @@ Upload your pushbutton.ino code to the Arduino and run it. Open the Serial monit
     > your answer
 
 3. Why does LOW indicate that the button is pressed?
-    > your answer
-
-4. In the pushbutton there is an internal pull up resistor that keeps the pin HIGH until the button connects it. What is the purpose of INPUT_PULLUP when you set up the pin mode?
     > your answer
 
 ## 4. Modify the behavior
